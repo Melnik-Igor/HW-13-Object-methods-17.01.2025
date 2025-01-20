@@ -1,5 +1,5 @@
 import java.util.Objects;
-
+// Класс, представляющий автора книги
 public class Author {
     private String firstName;
     private String lastName;
@@ -24,12 +24,12 @@ public class Author {
     public void setLastName(String lastName) {
         this.lastName = lastName;
     }
-
+    // Переопределение метода toString для удобного вывода информации об авторе
     @Override
     public String toString() {
         return firstName + " " + lastName;
     }
-
+    // Переопределение метода equals для сравнения объектов Author по полям firstName и lastName
     @Override
     public boolean equals(Object obj) {
         if (this == obj) return true; // Проверка на ссылочную равенство
@@ -38,7 +38,7 @@ public class Author {
         return Objects.equals(firstName, author.firstName) &&
                 Objects.equals(lastName, author.lastName); // Сравнение полей
     }
-
+    // Переопределение метода hashCode для корректного использования объектов Author в коллекциях
     @Override
     public int hashCode() {
         return Objects.hash(firstName, lastName);
